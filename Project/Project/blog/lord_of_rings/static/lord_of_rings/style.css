@@ -1,0 +1,76 @@
+body {
+    border: 5px solid black;
+}
+
+
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    background-color: #fbf71a;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 0.8;
+    border-radius: 50%;
+
+}
+
+.div {
+    text-align: center;
+    border: 10px double black;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 10px;
+    border-radius: 30px;
+    background: #693c01;
+    
+
+
+
+
+}
+
+
+
+body {
+    background: url(https://cdn.culture.ru/images/10a89291-74f8-5924-9e44-57006f96fd4f);
+    background-size: cover;
+
+
+
+}
+
+.Aragorn {
+    border-radius: 30px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fbf71a;
+    border-radius: 30px;
+    padding: 10px;
+    line-height: 15px;
+    text-indent: 10px;
+    text-align: center;
+
+}
+
+.name_and_nickname {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    background-color: #fbf71a;
+    list-style-type: upper-roman;
+    border-radius: 5px;
+    margin: 30px;
+    text-align: left;
+
+}
+
+#name_and_nickname {
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+   
+    
+}
