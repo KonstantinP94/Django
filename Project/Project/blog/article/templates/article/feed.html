@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Все записи {{author}}</h1>
+
+    {{all_posts}}
+
+    <ol>
+    {% for article in all_posts %}
+        <li>{{article}}</li>
+    {% endfor %}
+    </ol>
+
+</body>
+</html>

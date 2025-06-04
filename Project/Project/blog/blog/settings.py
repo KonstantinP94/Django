@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainpage',
     'lord_of_rings',
+    'article',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
  "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'students', 
-        'USER': 'konstantin',
+        'NAME': 'blog', 
+        'USER': 'blogger',
     }
 }
 
