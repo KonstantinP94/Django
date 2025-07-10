@@ -1,0 +1,6 @@
+body, a {
+    background: url('/static/mainpage/lotr.jpg');
+    background-size: cover;
+    color: red;
+    }
+

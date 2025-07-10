@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'mainpage/css/style.css' %}">
+
 </head>
 <body>
-    <h1>Мой первый шаблон</h1>
-    <a href="http://127.0.0.1:8000/lord_of_rings">LOTRO</a>
+
+    <!-- <img src="{% static 'mainpage/lotr.jpg' %}" width="500" height="200"> -->
+
+    <h1>Заголовок сайта</h1>
+    <p>
+        Наследование шаблона:
+        {% include 'mainpage/menu.html' %}
+    </p>
+
+    {% block content %}
+
+    <h1>Создайте свой блог прямо сейчас! </h1>
+  
+
+    <h2>Меню</h2>
+    <ul>
+        <a href="http://127.0.0.1:8000/lord_of_rings">LOTRO</a>
+        <br>
+        <a href="http://127.0.0.1:8000/article/1/">Article</a>
+        <br>
+        <a href="http://127.0.0.1:8000/menu/">Menu</a>
+        <br>
+        <a href="http://127.0.0.1:8000/schedule/">КАЛЕНДАРЬ</a>
+    </ul>
+
+    {% endblock %}
+
 </body>
 </html>

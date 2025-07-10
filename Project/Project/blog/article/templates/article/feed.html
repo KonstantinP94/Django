@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    {% extends 'mainpage/main.html' %}
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'article/css/style.css' %}">
+
+    <script src="{% static 'article/js/hello.js' %}"></script>
+
+
 </head>
 <body>
-    <h1>Все записи {{author}}</h1>
+
+    {% block content %}
+
+    {% with "article/avatars/"|add:uid|add:".png" as avatar %}
+    <img src="{% static avatar %}" width="500" height="200">
+    {% endwith %}
+
+
+    <!-- <img src="{% static 'article/1.png' %}" width="500" height="200"> -->
+
+    <h1>Все записи, автор: "{{author}}"</h1>
 
     {{all_posts}}
 
-    <ol>
-    {% for article in all_posts %}
-        <li>{{article}}</li>
-    {% endfor %}
-    </ol>
+    <h2>Первая запись</h2>
+    <p>--<b>{{all_posts.0}}</b>--</p>
+
+    <ul>
+        {% for article in all_posts %}
+            <li> Запись №{{forloop.counter}} <b>{{article.dt}}</b>:  <em>{{article}}</em> - {{article.text}}</li>
+        {% endfor %}
+    </ul>
+    
+
+    {% endblock %}
 
 </body>
 </html>
